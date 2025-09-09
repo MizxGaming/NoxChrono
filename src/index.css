@@ -1,0 +1,77 @@
+@import "tailwindcss";
+
+@theme {
+  /* Catppuccin Mocha core */
+  --color-base: #1e1e2e;        /* base */
+  --color-mantle: #181825;      /* mantle */
+  --color-crust: #11111b;       /* crust */
+  --color-text: #cdd6f4;        /* text */
+  --color-subtext1: #bac2de;    /* subtext1 */
+
+  /* Accents */
+  --color-lavender: #b4befe;
+  --color-mauve: #cba6f7;
+  --color-blue: #89b4fa;
+  --color-teal: #94e2d5;
+  --color-yellow: #f9e2af;
+  --color-red: #f38ba8;
+
+  /* Surfaces */
+  --color-surface0: #313244;
+  --color-surface1: #45475a;
+  --color-overlay0: #6c7086;
+}
+
+/* Light flavor (Latte) variables for when .light class is on :root */
+:root.light {
+  --color-base: #eff1f5;
+  --color-mantle: #e6e9ef;
+  --color-crust: #dce0e8;
+  --color-text: #4c4f69;
+  --color-subtext1: #5c5f77;
+
+  --color-lavender: #7287fd;
+  --color-mauve: #8839ef;
+  --color-blue: #1e66f5;
+  --color-teal: #179299;
+  --color-yellow: #df8e1d;
+  --color-red: #d20f39;
+
+  --color-surface0: #ccd0da;
+  --color-surface1: #bcc0cc;
+  --color-overlay0: #9ca0b0;
+}
+
+/* Convenience color classes using arbitrary values */
+.bg-base { background-color: var(--color-base); }
+.bg-mantle { background-color: var(--color-mantle); }
+.bg-crust { background-color: var(--color-crust); }
+.bg-surface0 { background-color: var(--color-surface0); }
+.bg-surface1 { background-color: var(--color-surface1); }
+
+.text-text { color: var(--color-text); }
+.text-subtext1 { color: var(--color-subtext1); }
+
+.border-surface1 { border-color: var(--color-surface1); }
+.border-overlay0 { border-color: var(--color-overlay0); }
+
+.text-lavender { color: var(--color-lavender); }
+.text-teal { color: var(--color-teal); }
+.text-blue { color: var(--color-blue); }
+.text-red { color: var(--color-red); }
+.text-mauve { color: var(--color-mauve); }
+.text-yellow { color: var(--color-yellow); }
+
+.bg-teal-20 { background-color: color-mix(in oklab, var(--color-teal) 20%, transparent); }
+.bg-teal-30 { background-color: color-mix(in oklab, var(--color-teal) 30%, transparent); }
+.bg-red-20 { background-color: color-mix(in oklab, var(--color-red) 20%, transparent); }
+.bg-red-30 { background-color: color-mix(in oklab, var(--color-red) 30%, transparent); }
+.bg-lavender-20 { background-color: color-mix(in oklab, var(--color-lavender) 20%, transparent); }
+.bg-lavender-30 { background-color: color-mix(in oklab, var(--color-lavender) 30%, transparent); }
+.bg-mauve-20 { background-color: color-mix(in oklab, var(--color-mauve) 20%, transparent); }
+.bg-mauve-30 { background-color: color-mix(in oklab, var(--color-mauve) 30%, transparent); }
+.bg-yellow-20 { background-color: color-mix(in oklab, var(--color-yellow) 20%, transparent); }
+.bg-yellow-30 { background-color: color-mix(in oklab, var(--color-yellow) 30%, transparent); }
+/* Catppuccin-friendly base transitions */
+:root { --duration: 300ms; }
+* { transition: color var(--duration) ease, background-color var(--duration) ease, border-color var(--duration) ease; }
